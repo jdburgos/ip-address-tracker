@@ -9,10 +9,10 @@
 
   &__title {
     color: var(--c-white);
-    text-align: center;
     font-size: 25px;
     font-weight: 500;
     margin: 0 0 25px;
+    text-align: center;
   }
 
   @media only screen and (min-width: $b-medium) {

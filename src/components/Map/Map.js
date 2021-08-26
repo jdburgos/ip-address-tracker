@@ -1,11 +1,11 @@
 /** React core **/
-import React from "react";
+import React from 'react';
 
 /** Dependencies **/
-import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 
 /** Styles **/
-import styles from "./Map.module.scss";
+import styles from './Map.module.scss';
 
 export const Map = () => (
   <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className={styles.map}>
