@@ -1,0 +1,21 @@
+@import 'src/styles/settings/variables';
+
+.header {
+  align-items: center;
+  background-color: dodgerblue;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+
+  &__title {
+    color: var(--c-white);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 25px;
+  }
+
+  @media only screen and (min-width: $b-medium) {
+    padding: 20px 0;
+  }
+}
