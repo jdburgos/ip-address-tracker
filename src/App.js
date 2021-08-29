@@ -15,21 +15,21 @@ const App = () => {
     <main>
       <Header />
       <Card className={styles['app__address-description']}>
-        <div>
-          <span>IP ADDRESS</span>
-          <span>192.212.174.101</span>
+        <div className={styles['app__description-item']}>
+          <span className={styles['app__description-label']}>IP ADDRESS</span>
+          <span className={styles['app__description-text']}>192.212.174.101</span>
         </div>
-        <div>
-          <span>LOCATION</span>
-          <span>Brooklyn, NY 10001</span>
+        <div className={styles['app__description-item']}>
+          <span className={styles['app__description-label']}>LOCATION</span>
+          <span className={styles['app__description-text']}>Brooklyn, NY 10001</span>
         </div>
-        <div>
-          <span>TIMEZONE</span>
-          <span>UTC - 05:00</span>
+        <div className={styles['app__description-item']}>
+          <span className={styles['app__description-label']}>TIMEZONE</span>
+          <span className={styles['app__description-text']}>UTC - 05:00</span>
         </div>
-        <div>
-          <span>ISP</span>
-          <span>SpaceX Starlink</span>
+        <div className={styles['app__description-item']}>
+          <span className={styles['app__description-label']}>ISP</span>
+          <span className={styles['app__description-text']}>SpaceX Starlink</span>
         </div>
       </Card>
       <Map />

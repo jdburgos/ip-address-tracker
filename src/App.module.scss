@@ -3,14 +3,74 @@
 .app {
   &__address-description {
     background-color: var(--c-white);
+    display: flex;
+    flex-direction: column;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -12%);
-    width: calc(85% - 2px);
+    width: 80%;
     z-index: 401;
 
-    @media only screen and (min-width: $b-medium) {
-      width: calc(80% - 2px);
+    @media only screen and (min-width: $b-xlarge) {
+      flex-direction: row;
+      padding: 40px;
+      width: 55%;
+      justify-content: space-between;
+      transform: translate(-50%, -40%);
+    }
+  }
+
+  &__description {
+    &-item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-bottom: 20px;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media only screen and (min-width: $b-xlarge) {
+        align-items: initial;
+        margin-bottom: 0;
+        max-width: 190px;
+
+        &:after {
+          background-color: var(--c-dark-gray);
+          content: '';
+          display: block;
+          height: 70px;
+          opacity: 0.4;
+          position: absolute;
+          right: -60px;
+          top: 0;
+          width: 1px;
+        }
+      }
+    }
+
+    &-label {
+      color: var(--c-dark-gray);
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+
+      @media only screen and (min-width: $b-medium) {
+        font-size: 12px;
+      }
+    }
+
+    &-text {
+      color: var(--c-very-dark-gray);
+      font-weight: 500;
+
+      @media only screen and (min-width: $b-medium) {
+        font-size: 25px;
+      }
     }
   }
 }

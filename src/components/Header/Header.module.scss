@@ -5,7 +5,18 @@
   background-color: dodgerblue;
   display: flex;
   flex-direction: column;
-  padding: 30px 0;
+  justify-content: center;
+  overflow: hidden;
+
+  &__content {
+    position: absolute;
+    transform: translate(0, -15%);
+    width: 85%;
+
+    @media only screen and (min-width: $b-medium) {
+      width: 27%;
+    }
+  }
 
   &__title {
     color: var(--c-white);
@@ -15,7 +26,7 @@
     text-align: center;
   }
 
-  @media only screen and (min-width: $b-medium) {
-    padding: 20px 0;
+  &__image {
+    min-height: 200px;
   }
 }
