@@ -14,7 +14,11 @@ export const Header = () => {
         <h1 className={styles.header__title}>IP Address Tracker</h1>
         <Input />
       </div>
-      <img className={styles['header__image']} src={`${process.env.PUBLIC_URL}/images/pattern-bg.png`} alt="Background" />
+      <img
+        className={styles['header__image']}
+        src={`${process.env.PUBLIC_URL}/images/pattern-bg.png`}
+        alt="Background"
+      />
     </header>
   );
 };

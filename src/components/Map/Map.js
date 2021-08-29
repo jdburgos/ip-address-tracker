@@ -8,7 +8,6 @@ import L from 'leaflet';
 /** Styles **/
 import styles from './Map.module.scss';
 
-
 const icon = new L.Icon({
   iconUrl: `${process.env.PUBLIC_URL}/images/icon-location.svg`,
   iconRetinaUrl: `${process.env.PUBLIC_URL}/images/icon-location.svg`,
@@ -17,7 +16,7 @@ const icon = new L.Icon({
   shadowUrl: null,
   shadowSize: null,
   shadowAnchor: null,
-  iconSize: new L.Point(40, 50)
+  iconSize: new L.Point(40, 50),
 });
 
 export const Map = () => (

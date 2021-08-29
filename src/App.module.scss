@@ -13,10 +13,10 @@
 
     @media only screen and (min-width: $b-xlarge) {
       flex-direction: row;
-      padding: 40px;
-      width: 55%;
       justify-content: space-between;
+      padding: 40px;
       transform: translate(-50%, -40%);
+      width: 55%;
     }
   }
 
@@ -56,8 +56,8 @@
       color: var(--c-dark-gray);
       font-size: 10px;
       font-weight: 700;
-      margin-bottom: 12px;
       letter-spacing: 2px;
+      margin-bottom: 12px;
 
       @media only screen and (min-width: $b-medium) {
         font-size: 12px;
