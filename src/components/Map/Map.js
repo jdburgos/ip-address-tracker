@@ -2,7 +2,7 @@
 import React from 'react';
 
 /** Dependencies **/
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet';
 import L from 'leaflet';
 
 /** Styles **/
@@ -23,8 +23,17 @@ const icon = new L.Icon({
 export const Map = () => {
   const position = useSelector(({ address }) => address.data.position);
 
+  const mapInstance = (map) => {
+    map.panTo(position);
+
+    return null
+  };
+
   return (
     <MapContainer center={position} zoom={13} scrollWheelZoom={false} className={styles.map}>
+      <MapConsumer>
+        {mapInstance}
+      </MapConsumer>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
