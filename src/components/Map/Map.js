@@ -31,5 +31,5 @@ export const Map = () => {
       />
       <Marker position={position} icon={icon} />
     </MapContainer>
-  )
+  );
 };

@@ -13,7 +13,7 @@ import styles from './App.module.scss';
 
 const App = () => {
   const data = useSelector(({ address }) => address.data);
-  let content
+  let content;
 
   if (data) {
     const { ip, isp, city, country, postalCode, timezone } = data;
@@ -22,19 +22,21 @@ const App = () => {
       <Card className={styles['app__address-description']}>
         <div className={styles['app__description-item']}>
           <span className={styles['app__description-label']}>IP ADDRESS</span>
-          <span className={styles['app__description-text']}>{ ip }</span>
+          <span className={styles['app__description-text']}>{ip}</span>
         </div>
         <div className={styles['app__description-item']}>
           <span className={styles['app__description-label']}>LOCATION</span>
-          <span className={styles['app__description-text']}>{ city }, { country } { postalCode }</span>
+          <span className={styles['app__description-text']}>
+            {city}, {country} {postalCode}
+          </span>
         </div>
         <div className={styles['app__description-item']}>
           <span className={styles['app__description-label']}>TIMEZONE</span>
-          <span className={styles['app__description-text']}>UTC { timezone }</span>
+          <span className={styles['app__description-text']}>UTC {timezone}</span>
         </div>
         <div className={styles['app__description-item']}>
           <span className={styles['app__description-label']}>ISP</span>
-          <span className={styles['app__description-text']}>{ isp }</span>
+          <span className={styles['app__description-text']}>{isp}</span>
         </div>
       </Card>
     );
@@ -43,7 +45,7 @@ const App = () => {
   return (
     <main>
       <Header />
-      { data.ip && content }
+      {data.ip && content}
       <Map />
     </main>
   );

@@ -15,7 +15,7 @@ export const Input = () => {
   const trackIpHandler = e => {
     const ipRegex = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/g;
     const isClick = e.type === 'click';
-    const isEnterKey = (e.key === 'Enter') && (e.type === 'keyup');
+    const isEnterKey = e.key === 'Enter' && e.type === 'keyup';
     const ip = ipRef.current.value.trim();
     const isIp = ipRegex.test(ip);
     const isValid = isIp && (isClick || isEnterKey);
@@ -28,7 +28,7 @@ export const Input = () => {
   return (
     <div>
       <input
-        ref={ ipRef }
+        ref={ipRef}
         className={styles.input}
         type="text"
         placeholder="Search for any IP address or domain"
