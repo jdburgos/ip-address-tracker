@@ -1,10 +1,9 @@
 /** Dependencies **/
 import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet';
 import L from 'leaflet';
-import { useSelector } from 'react-redux';
 
-/** Store **/
-import { RootState } from '../../store';
+/** Hooks **/
+import { useAppSelector } from "../../hooks/react-redux";
 
 /** Styles **/
 import styles from './Map.module.scss';
@@ -21,7 +20,7 @@ const icon = new L.Icon({
 });
 
 export const Map = () => {
-  const position = useSelector(({ address }: RootState) => address.data.position);
+  const position = useAppSelector(({ address }) => address.data.position);
 
   const mapInstance = (map: { panTo: (arg0: [number, number]) => void }) => {
     map.panTo(position);

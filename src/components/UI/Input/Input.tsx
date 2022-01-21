@@ -1,12 +1,14 @@
 /** React core **/
 import React, { useRef } from 'react';
-import { useDispatch } from 'react-redux';
 
 /** Styles **/
 import styles from './Input.module.scss';
 
 /** Actions **/
 import { fetchAddressData } from '../../../store/address/address.actions';
+
+/** Hooks **/
+import { useAppDispatch } from "../../../hooks/react-redux";
 
 type ChangeEvent = React.KeyboardEvent | React.MouseEvent;
 
@@ -16,7 +18,7 @@ const isKeyboardEvent = (e: ChangeEvent): e is React.KeyboardEvent => {
 
 export const Input = () => {
   const ipRef = useRef<HTMLInputElement>(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const trackIpHandler = (e: ChangeEvent) => {
     const ipRegex = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/g;

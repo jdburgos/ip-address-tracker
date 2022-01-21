@@ -1,20 +1,17 @@
-/** React core **/
-import { useSelector } from 'react-redux';
-
 /** Components **/
 import { Header } from './components/Header';
 import { Card } from './components/UI/Card';
 import { Map } from './components/Map';
 
-/** Store **/
-import { RootState } from './store';
+/** Hooks **/
+import { useAppSelector } from "./hooks/react-redux";
 
 /** Styles **/
 import './styles/styles.scss';
 import styles from './App.module.scss';
 
 const App = () => {
-  const data = useSelector(({ address }: RootState) => address.data);
+  const data = useAppSelector(({ address }) => address.data);
   let content;
 
   if (data) {
