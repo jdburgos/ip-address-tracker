@@ -4,7 +4,7 @@ import { Card } from './components/UI/Card';
 import { Map } from './components/Map';
 
 /** Hooks **/
-import { useAppSelector } from "./hooks/react-redux";
+import { useAppSelector } from './hooks/react-redux';
 
 /** Styles **/
 import './styles/styles.scss';

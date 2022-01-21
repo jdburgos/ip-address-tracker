@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet';
 import L from 'leaflet';
 
 /** Hooks **/
-import { useAppSelector } from "../../hooks/react-redux";
+import { useAppSelector } from '../../hooks/react-redux';
 
 /** Styles **/
 import styles from './Map.module.scss';
