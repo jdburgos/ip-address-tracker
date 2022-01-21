@@ -1,5 +1,4 @@
 /** React core **/
-import React from 'react';
 import { useSelector } from 'react-redux';
 
 /** Components **/
@@ -7,12 +6,15 @@ import { Header } from './components/Header';
 import { Card } from './components/UI/Card';
 import { Map } from './components/Map';
 
+/** Store **/
+import { RootState } from './store';
+
 /** Styles **/
 import './styles/styles.scss';
 import styles from './App.module.scss';
 
 const App = () => {
-  const data = useSelector(({ address }) => address.data);
+  const data = useSelector(({ address }: RootState) => address.data);
   let content;
 
   if (data) {

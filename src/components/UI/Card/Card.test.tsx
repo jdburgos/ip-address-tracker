@@ -1,14 +1,18 @@
 /** React core **/
 import ReactDOM from 'react-dom';
-import React from 'react';
 
 /** Components **/
-import App from './App';
+import { Card } from './Card';
 
-describe('App', () => {
+describe('Card', () => {
   test('should renders without crashing', () => {
     const div = document.createElement('div');
 
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(
+      <Card className="test-class">
+        <div>Card</div>
+      </Card>,
+      div,
+    );
   });
 });

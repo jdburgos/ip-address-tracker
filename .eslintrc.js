@@ -1,11 +1,12 @@
 module.exports = {
   env: {
-    jest: true,
-    node: true,
     browser: true,
     es2021: true,
+    node: true,
+    jest: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'standard', 'prettier'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -13,6 +14,11 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {},
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };

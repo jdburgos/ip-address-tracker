@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# IP Address tracker app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is for learn and practice ReactJs.\
+See the app in production - [IP Address tracker app](https://jdburgos.github.io/ip-address-tracker/)
+
+## Env variables
+
+create .env file in the root project folder and put inside the following variables to setup the local environment:
+
+REACT_APP_API_KEY
 
 ## Available Scripts
 
@@ -39,32 +46,23 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `npm deploy`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Deploy the app in github pages.\
+See the app in production - [IP Address tracker app](https://jdburgos.github.io/ip-address-tracker/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm lint`
 
-### Code Splitting
+Lints the code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `npm format`
 
-### Analyzing the Bundle Size
+Formats the code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### `npm stylelint`
 
-### Making a Progressive Web App
+Lints scss/css styles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `npm analyze`
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Analyzes the bundle sizes.

@@ -1,9 +1,12 @@
+/** Interfaces **/
+import { IAddress } from '../../interfaces/address.interface';
+
 /** Actions **/
 import { addressActions } from './address.reducer';
 
-export const fetchAddressData = ip => {
-  return async dispatch => {
-    const fetchData = async () => {
+export const fetchAddressData = (ip: string) => {
+  return async (dispatch: (arg0: { payload: IAddress; type: string }) => void) => {
+    const fetchData = async (): Promise<IAddress> => {
       const apiKey = process.env.REACT_APP_API_KEY;
       const response = await fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`);
 

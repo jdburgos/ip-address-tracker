@@ -1,29 +1,29 @@
-/** React core **/
-import React from 'react';
-
 /** Dependencies **/
 import { MapContainer, TileLayer, Marker, MapConsumer } from 'react-leaflet';
 import L from 'leaflet';
+import { useSelector } from 'react-redux';
+
+/** Store **/
+import { RootState } from '../../store';
 
 /** Styles **/
 import styles from './Map.module.scss';
-import { useSelector } from 'react-redux';
 
 const icon = new L.Icon({
   iconUrl: `${process.env.PUBLIC_URL}/images/icon-location.svg`,
   iconRetinaUrl: `${process.env.PUBLIC_URL}/images/icon-location.svg`,
-  iconAnchor: null,
-  popupAnchor: null,
-  shadowUrl: null,
-  shadowSize: null,
-  shadowAnchor: null,
+  iconAnchor: undefined,
+  popupAnchor: undefined,
+  shadowUrl: undefined,
+  shadowSize: undefined,
+  shadowAnchor: undefined,
   iconSize: new L.Point(40, 50),
 });
 
 export const Map = () => {
-  const position = useSelector(({ address }) => address.data.position);
+  const position = useSelector(({ address }: RootState) => address.data.position);
 
-  const mapInstance = map => {
+  const mapInstance = (map: { panTo: (arg0: [number, number]) => void }) => {
     map.panTo(position);
 
     return null;

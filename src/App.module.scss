@@ -38,7 +38,7 @@
         margin-bottom: 0;
         max-width: 190px;
 
-        &:after {
+        &::after {
           background-color: var(--c-dark-gray);
           content: '';
           display: block;
